@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- spring框架加载的时候会  new com.jason.blog.HelloWorld(); helloBean.setName("Charming Who"); -->
+    <bean id="helloBean" class="hello.HelloWorld">
+        <property name="name" value="Charming Who" />
+    </bean>
+
+
+    <bean id="dbUtil" class="hello.DbUtil">
+        <property name="host" value="${host}" />
+        <property name="port" value="${port}" />
+    </bean>
+
+
+
+    <import resource="jdbc/*.xml" />
+    <import resource="table/*.xml" />
+
+</beans>
