@@ -124,6 +124,11 @@
             <artifactId>mybatis</artifactId>
             <version>3.2.8</version>
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.5</version>
+        </dependency>
 
 
     </dependencies>
@@ -194,6 +199,7 @@
             <properties>
                 <environment>dev</environment>
             </properties>
+
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -204,6 +210,7 @@
             <properties>
                 <environment>test</environment>
             </properties>
+
         </profile>
 
         <profile>

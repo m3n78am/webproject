@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jason.webproject.dao.SportOrderDao">
+
+    <!-- resultType = "SportOrder" 里面的SportOrder是在mybatis-config的alias定义的，否则需要写全类路径 -->
+    <select id="selectSportOrderByPurposeId" parameterType="int" resultMap="sportOrder">
+        select * from `sport_vip_card_order` where purpose = #{id}
+    </select>
+
+    <select id="selectSportOrderByPageNo" parameterType="map" resultMap="sportOrder">
+        select * from sport_vip_card_order limit  ${startId} , #{pageSize}
+    </select>
+
+    <resultMap type="SportOrder" id="sportOrder">
+        <id column="id" property="id" />
+        <result column="date" property="date" />
+        <result column="payment" property="payment" />
+        <result column="purpose" property="purpose" />
+    </resultMap>
+
+</mapper>

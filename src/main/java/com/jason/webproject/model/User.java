@@ -6,33 +6,49 @@ package com.jason.webproject.model;
 public class User {
 
     private int id;
-    private String userName;
-    private String userAge;
-    private String userAddress;
+    private String name;
+    private int age;
+    private int gender;
+    private String contact;
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
 
     public int getId() {
+
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-    public String getUserName() {
-        return userName;
-    }
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-    public String getUserAge() {
-        return userAge;
-    }
-    public void setUserAge(String userAge) {
-        this.userAge = userAge;
-    }
-    public String getUserAddress() {
-        return userAddress;
-    }
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
+
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
