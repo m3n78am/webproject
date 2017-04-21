@@ -1,4 +1,4 @@
-package com.jason.webproject.dao;
+package com.jason.webproject.service.impl;
 
 
 import com.jason.webproject.model.Customer;

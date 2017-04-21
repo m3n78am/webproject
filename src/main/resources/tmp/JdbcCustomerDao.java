@@ -1,7 +1,6 @@
-package com.jason.webproject.dao.impl;
+package com.jason.webproject.service.impl;
 
 
-import com.jason.webproject.dao.CustomerDao;
 import com.jason.webproject.model.Customer;
 
 import javax.sql.DataSource;
